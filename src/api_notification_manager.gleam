@@ -38,7 +38,7 @@ fn connect_to_redis() {
   io.println("Conectando com Redis...")
   let assert Ok(client) =
     radish.start(environment.redis_host, environment.redis_port, [
-      radish.Timeout(128),
+      radish.Timeout(256),
       radish.Auth(environment.redis_password),
     ])
   io.println("Conectado com sucesso.\n")
